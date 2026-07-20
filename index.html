@@ -16,6 +16,13 @@
     .heading { margin-bottom:28px; }
     h2 { margin:0; font-size:clamp(24px,4vw,40px); }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:18px; }
+    .video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+    .video-card { padding:12px; border:1px solid #292929; border-radius:18px; background:#0b0b0b; }
+    .video-card video { display:block; width:100%; aspect-ratio:9/16; border-radius:12px; background:#000; }
+    .video-card h3 { margin:12px 0 10px; font-size:16px; line-height:1.25; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .download { display:inline-block; padding:11px 16px; border-radius:999px; background:var(--accent); color:#00131b; font-weight:700; text-decoration:none; }
+    .download.secondary { background:#252525; color:#fff; }
     figure { margin:0; }
     figure a { display:block; border-radius:16px; overflow:hidden; background:#000; }
     img { display:block; width:100%; height:auto; }
@@ -26,7 +33,28 @@
 <body>
   <main>
     <h1>Материалы для скачивания</h1>
-    <p class="intro">Архив каруселей философского клуба. Новые материалы появляются сверху. Нажмите на слайд, чтобы скачать PNG.</p>
+    <p class="intro">Архив готовых материалов философского клуба. Новые материалы появляются сверху.</p>
+    <article>
+      <div class="heading">
+        <h2>11 роликов о правильных вопросах в работе</h2>
+        <div class="actions">
+          <a class="download" href="videos/workplace-questions-series/workplace-questions-series.zip" download>Скачать все ролики ZIP</a>
+        </div>
+      </div>
+      <div class="video-grid">
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/01-understood-wrong.jpg" src="videos/workplace-questions-series/01-understood-wrong.mp4"></video><h3>01 — Неделю работал не над тем</h3><a class="download secondary" href="videos/workplace-questions-series/01-understood-wrong.mp4" download>Скачать MP4</a></div>
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/02-fake-urgent.jpg" src="videos/workplace-questions-series/02-fake-urgent.mp4"></video><h3>02 — «Срочно» через две недели</h3><a class="download secondary" href="videos/workplace-questions-series/02-fake-urgent.mp4" download>Скачать MP4</a></div>
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/03-obvious-question.jpg" src="videos/workplace-questions-series/03-obvious-question.mp4"></video><h3>03 — Очевидный вопрос</h3><a class="download secondary" href="videos/workplace-questions-series/03-obvious-question.mp4" download>Скачать MP4</a></div>
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/04-wrong-advice.jpg" src="videos/workplace-questions-series/04-wrong-advice.mp4"></video><h3>04 — Советы не про его проблему</h3><a class="download secondary" href="videos/workplace-questions-series/04-wrong-advice.mp4" download>Скачать MP4</a></div>
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/05-initiative-boundaries.jpg" src="videos/workplace-questions-series/05-initiative-boundaries.mp4"></video><h3>05 — Границы инициативы</h3><a class="download secondary" href="videos/workplace-questions-series/05-initiative-boundaries.mp4" download>Скачать MP4</a></div>
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/06-silenced-objection.jpg" src="videos/workplace-questions-series/06-silenced-objection.mp4"></video><h3>06 — Промолчал руководителю</h3><a class="download secondary" href="videos/workplace-questions-series/06-silenced-objection.mp4" download>Скачать MP4</a></div>
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/07-duplicate-work.jpg" src="videos/workplace-questions-series/07-duplicate-work.mp4"></video><h3>07 — Сделали одно и то же</h3><a class="download secondary" href="videos/workplace-questions-series/07-duplicate-work.mp4" download>Скачать MP4</a></div>
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/08-meeting-no-decision.jpg" src="videos/workplace-questions-series/08-meeting-no-decision.mp4"></video><h3>08 — Встреча без решения</h3><a class="download secondary" href="videos/workplace-questions-series/08-meeting-no-decision.mp4" download>Скачать MP4</a></div>
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/09-missing-deadline.jpg" src="videos/workplace-questions-series/09-missing-deadline.mp4"></video><h3>09 — Задача без дедлайна</h3><a class="download secondary" href="videos/workplace-questions-series/09-missing-deadline.mp4" download>Скачать MP4</a></div>
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/10-heard-not-agreed.jpg" src="videos/workplace-questions-series/10-heard-not-agreed.mp4"></video><h3>10 — «Я тебя услышал»</h3><a class="download secondary" href="videos/workplace-questions-series/10-heard-not-agreed.mp4" download>Скачать MP4</a></div>
+        <div class="video-card"><video controls playsinline preload="metadata" poster="videos/workplace-questions-series/previews/11-overloaded-request.jpg" src="videos/workplace-questions-series/11-overloaded-request.mp4"></video><h3>11 — Согласился несмотря на загрузку</h3><a class="download secondary" href="videos/workplace-questions-series/11-overloaded-request.mp4" download>Скачать MP4</a></div>
+      </div>
+    </article>
     <article>
       <div class="heading">
         <h2>5 вопросов команде, на которые вы не хотите услышать ответ</h2>
