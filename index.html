@@ -199,5 +199,44 @@
       </div>
     </article>
   </main>
+  <script>
+    (() => {
+      const isIOS =
+        /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+      if (!isIOS || !navigator.share || !navigator.canShare) return;
+
+      document.querySelectorAll(".grid figure a[download]").forEach((link) => {
+        link.addEventListener("click", async (event) => {
+          event.preventDefault();
+          try {
+            const response = await fetch(link.href);
+            if (!response.ok) throw new Error("Image request failed");
+            const blob = await response.blob();
+            const filename = link.getAttribute("download") || "image.png";
+            const file = new File([blob], filename, { type: blob.type || "image/png" });
+
+            if (!navigator.canShare({ files: [file] })) {
+              window.location.href = link.href;
+              return;
+            }
+
+            await navigator.share({ files: [file] });
+          } catch (error) {
+            if (error.name !== "AbortError") window.location.href = link.href;
+          }
+        });
+
+        const caption = link.closest("figure")?.querySelector("figcaption");
+        if (caption) {
+          caption.textContent = caption.textContent.replace(
+            "нажмите, чтобы скачать",
+            "нажмите → «Сохранить изображение»"
+          );
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
