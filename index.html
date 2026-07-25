@@ -23,11 +23,9 @@
     .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
     .download { display:inline-block; padding:11px 16px; border-radius:999px; background:var(--accent); color:#00131b; font-weight:700; text-decoration:none; }
     .download.secondary { background:#252525; color:#fff; }
-    .manage-toolbar { display:none; align-items:center; gap:12px; margin:-20px 0 32px; }
-    body.manage-mode .manage-toolbar { display:flex; }
+    .manage-toolbar { display:flex; align-items:center; gap:12px; margin:-20px 0 32px; }
     .manage-note { color:var(--muted); font-size:14px; }
-    .delete-block { display:none; margin-top:14px; padding:9px 14px; border:1px solid #693636; border-radius:999px; background:#2a1414; color:#ffb5b5; font:inherit; font-weight:700; cursor:pointer; }
-    body.manage-mode .delete-block { display:inline-block; }
+    .delete-block { display:inline-block; margin-top:14px; padding:9px 14px; border:1px solid #693636; border-radius:999px; background:#2a1414; color:#ffb5b5; font:inherit; font-weight:700; cursor:pointer; }
     .restore-blocks { padding:9px 14px; border:1px solid #3a3a3a; border-radius:999px; background:#252525; color:#fff; font:inherit; font-weight:700; cursor:pointer; }
     .confirm-overlay { position:fixed; inset:0; z-index:100; display:grid; place-items:center; padding:20px; background:rgba(0,0,0,.72); backdrop-filter:blur(6px); }
     .confirm-overlay[hidden] { display:none; }
@@ -308,9 +306,6 @@
         article.dataset.blockId = blockId(article);
         article.hidden = hiddenBlocks.has(article.dataset.blockId);
       });
-
-      if (new URLSearchParams(location.search).get("manage") !== "1") return;
-      document.body.classList.add("manage-mode");
 
       const closeDialog = () => {
         overlay.hidden = true;
