@@ -13,7 +13,12 @@
     .intro { margin:0 0 40px; color:var(--muted); font-size:18px; }
     article { padding:28px; border:1px solid #292929; border-radius:24px; background:var(--card); }
     article + article { margin-top:28px; }
-    .heading { margin-bottom:28px; }
+    .heading { position:relative; min-height:44px; margin-bottom:28px; padding-right:54px; }
+    article.is-collapsed .heading { margin-bottom:0; }
+    article.is-collapsed > :not(.heading) { display:none; }
+    .collapse-block { position:absolute; top:0; right:0; width:42px; height:42px; padding:0; border:1px solid #3a3a3a; border-radius:50%; background:#252525; color:#fff; font:700 23px/1 Arial,sans-serif; cursor:pointer; transition:transform .18s ease,background .18s ease; }
+    .collapse-block:hover { background:#333; }
+    .collapse-block[aria-expanded="false"] { transform:rotate(180deg); }
     h2 { margin:0; font-size:clamp(24px,4vw,40px); }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:18px; }
     .video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
@@ -50,6 +55,54 @@
       <button class="restore-blocks" type="button">Восстановить скрытые блоки</button>
       <span class="manage-note">Режим управления действует в этом браузере</span>
     </div>
+    <article>
+      <div class="heading"><h2>Факты или интерпретации</h2></div>
+      <div class="grid">
+        <figure><a href="carousels/facts-vs-interpretations/slide_01.png" download="01-cover.png"><img src="carousels/facts-vs-interpretations/slide_01.png" alt="Скачать обложку карусели о фактах и интерпретациях"></a><figcaption>01 — Обложка · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/facts-vs-interpretations/slide_02.png" download="02-slide.png"><img src="carousels/facts-vs-interpretations/slide_02.png" alt="Скачать второй слайд" loading="lazy"></a><figcaption>02 — Чужие слова · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/facts-vs-interpretations/slide_03.png" download="03-slide.png"><img src="carousels/facts-vs-interpretations/slide_03.png" alt="Скачать третий слайд" loading="lazy"></a><figcaption>03 — Один случай · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/facts-vs-interpretations/slide_04.png" download="04-slide.png"><img src="carousels/facts-vs-interpretations/slide_04.png" alt="Скачать четвёртый слайд" loading="lazy"></a><figcaption>04 — Проверяемость · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/facts-vs-interpretations/slide_05.png" download="05-slide.png"><img src="carousels/facts-vs-interpretations/slide_05.png" alt="Скачать пятый слайд" loading="lazy"></a><figcaption>05 — Другие объяснения · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/facts-vs-interpretations/slide_06.png" download="06-slide.png"><img src="carousels/facts-vs-interpretations/slide_06.png" alt="Скачать шестой слайд" loading="lazy"></a><figcaption>06 — Факты · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/facts-vs-interpretations/slide_07.png" download="07-cta.png"><img src="carousels/facts-vs-interpretations/slide_07.png" alt="Скачать CTA" loading="lazy"></a><figcaption>07 — CTA · нажмите, чтобы скачать</figcaption></figure>
+      </div>
+    </article>
+    <article>
+      <div class="heading"><h2>Что руководителю оставить себе</h2></div>
+      <div class="grid">
+        <figure><a href="carousels/delegation-core/slide_01.png" download="01-cover.png"><img src="carousels/delegation-core/slide_01.png" alt="Скачать обложку карусели о делегировании"></a><figcaption>01 — Обложка · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/delegation-core/slide_02.png" download="02-slide.png"><img src="carousels/delegation-core/slide_02.png" alt="Скачать второй слайд" loading="lazy"></a><figcaption>02 — Ясный результат · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/delegation-core/slide_03.png" download="03-slide.png"><img src="carousels/delegation-core/slide_03.png" alt="Скачать третий слайд" loading="lazy"></a><figcaption>03 — Зона команды · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/delegation-core/slide_04.png" download="04-slide.png"><img src="carousels/delegation-core/slide_04.png" alt="Скачать четвёртый слайд" loading="lazy"></a><figcaption>04 — После ошибки · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/delegation-core/slide_05.png" download="05-slide.png"><img src="carousels/delegation-core/slide_05.png" alt="Скачать пятый слайд" loading="lazy"></a><figcaption>05 — Так быстрее · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/delegation-core/slide_06.png" download="06-slide.png"><img src="carousels/delegation-core/slide_06.png" alt="Скачать шестой слайд" loading="lazy"></a><figcaption>06 — Задачи руководителя · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/delegation-core/slide_07.png" download="07-cta.png"><img src="carousels/delegation-core/slide_07.png" alt="Скачать CTA" loading="lazy"></a><figcaption>07 — CTA · нажмите, чтобы скачать</figcaption></figure>
+      </div>
+    </article>
+    <article>
+      <div class="heading"><h2>Сколько встреч действительно нужны</h2></div>
+      <div class="grid">
+        <figure><a href="carousels/useful-meetings/slide_01.png" download="01-cover.png"><img src="carousels/useful-meetings/slide_01.png" alt="Скачать обложку карусели о встречах"></a><figcaption>01 — Обложка · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/useful-meetings/slide_02.png" download="02-slide.png"><img src="carousels/useful-meetings/slide_02.png" alt="Скачать второй слайд" loading="lazy"></a><figcaption>02 — Общее обсуждение · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/useful-meetings/slide_03.png" download="03-slide.png"><img src="carousels/useful-meetings/slide_03.png" alt="Скачать третий слайд" loading="lazy"></a><figcaption>03 — Сообщение или документ · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/useful-meetings/slide_04.png" download="04-slide.png"><img src="carousels/useful-meetings/slide_04.png" alt="Скачать четвёртый слайд" loading="lazy"></a><figcaption>04 — Кто решает · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/useful-meetings/slide_05.png" download="05-slide.png"><img src="carousels/useful-meetings/slide_05.png" alt="Скачать пятый слайд" loading="lazy"></a><figcaption>05 — Следующий шаг · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/useful-meetings/slide_06.png" download="06-slide.png"><img src="carousels/useful-meetings/slide_06.png" alt="Скачать шестой слайд" loading="lazy"></a><figcaption>06 — Полезные встречи · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/useful-meetings/slide_07.png" download="07-cta.png"><img src="carousels/useful-meetings/slide_07.png" alt="Скачать CTA" loading="lazy"></a><figcaption>07 — CTA · нажмите, чтобы скачать</figcaption></figure>
+      </div>
+    </article>
+    <article>
+      <div class="heading"><h2>Сколько конфликтов реальны</h2></div>
+      <div class="grid">
+        <figure><a href="carousels/real-conflicts/slide_01.png" download="01-cover.png"><img src="carousels/real-conflicts/slide_01.png" alt="Скачать обложку карусели о конфликтах"></a><figcaption>01 — Обложка · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/real-conflicts/slide_02.png" download="02-slide.png"><img src="carousels/real-conflicts/slide_02.png" alt="Скачать второй слайд" loading="lazy"></a><figcaption>02 — Значение слов · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/real-conflicts/slide_03.png" download="03-slide.png"><img src="carousels/real-conflicts/slide_03.png" alt="Скачать третий слайд" loading="lazy"></a><figcaption>03 — Догадки о намерениях · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/real-conflicts/slide_04.png" download="04-slide.png"><img src="carousels/real-conflicts/slide_04.png" alt="Скачать четвёртый слайд" loading="lazy"></a><figcaption>04 — Критерии результата · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/real-conflicts/slide_05.png" download="05-slide.png"><img src="carousels/real-conflicts/slide_05.png" alt="Скачать пятый слайд" loading="lazy"></a><figcaption>05 — Разные способы · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/real-conflicts/slide_06.png" download="06-slide.png"><img src="carousels/real-conflicts/slide_06.png" alt="Скачать шестой слайд" loading="lazy"></a><figcaption>06 — Реальные конфликты · нажмите, чтобы скачать</figcaption></figure>
+        <figure><a href="carousels/real-conflicts/slide_07.png" download="07-cta.png"><img src="carousels/real-conflicts/slide_07.png" alt="Скачать CTA" loading="lazy"></a><figcaption>07 — CTA · нажмите, чтобы скачать</figcaption></figure>
+      </div>
+    </article>
     <article>
       <div class="heading">
         <h2>Настоящие вопросы, которые помогают мыслить</h2>
@@ -291,6 +344,7 @@
 
     (() => {
       const storageKey = "content-downloads-hidden-blocks-v1";
+      const collapsedStorageKey = "content-downloads-collapsed-blocks-v1";
       const articles = [...document.querySelectorAll("main > article")];
       const overlay = document.querySelector(".confirm-overlay");
       const yesButton = document.querySelector(".confirm-yes");
@@ -314,9 +368,21 @@
       };
 
       let hiddenBlocks = readHidden();
+      let collapsedBlocks;
+      try {
+        collapsedBlocks = new Set(
+          JSON.parse(localStorage.getItem(collapsedStorageKey) || "[]")
+        );
+      } catch {
+        collapsedBlocks = new Set();
+      }
       articles.forEach((article) => {
         article.dataset.blockId = blockId(article);
         article.hidden = hiddenBlocks.has(article.dataset.blockId);
+        article.classList.toggle(
+          "is-collapsed",
+          collapsedBlocks.has(article.dataset.blockId)
+        );
       });
 
       const closeDialog = () => {
@@ -325,6 +391,37 @@
       };
 
       articles.forEach((article) => {
+        const collapseButton = document.createElement("button");
+        collapseButton.type = "button";
+        collapseButton.className = "collapse-block";
+        collapseButton.textContent = "⌃";
+        collapseButton.setAttribute(
+          "aria-label",
+          article.classList.contains("is-collapsed") ? "Развернуть блок" : "Свернуть блок"
+        );
+        collapseButton.setAttribute(
+          "aria-expanded",
+          String(!article.classList.contains("is-collapsed"))
+        );
+        collapseButton.addEventListener("click", () => {
+          const isCollapsed = article.classList.toggle("is-collapsed");
+          collapseButton.setAttribute("aria-expanded", String(!isCollapsed));
+          collapseButton.setAttribute(
+            "aria-label",
+            isCollapsed ? "Развернуть блок" : "Свернуть блок"
+          );
+          if (isCollapsed) {
+            collapsedBlocks.add(article.dataset.blockId);
+          } else {
+            collapsedBlocks.delete(article.dataset.blockId);
+          }
+          localStorage.setItem(
+            collapsedStorageKey,
+            JSON.stringify([...collapsedBlocks])
+          );
+        });
+        article.querySelector(".heading")?.append(collapseButton);
+
         const button = document.createElement("button");
         button.type = "button";
         button.className = "delete-block";
